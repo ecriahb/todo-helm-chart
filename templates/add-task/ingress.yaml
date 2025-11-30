@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{ .Release.Name }}-todo-add-tasks-api-ingress
+  name: {{ .Release.Name }}-add-tasks
 spec:
   ingressClassName: {{ .Values.addTask.ingress.ingressClass }}
   rules:
