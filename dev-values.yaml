@@ -15,7 +15,7 @@ ui:
 getTask:
   replicas: 2
   image:
-    name: todo-get-tasks-api
+    name: update-tasks
     tag: v1
   port: 8000
   ServicePort: 80
@@ -27,7 +27,7 @@ getTask:
 deleteTask:
   replicas: 2
   image:
-    name: todo-delete-tasks-api
+    name: delete-tasks
     tag: v1
   port: 8000
   ServicePort: 80
@@ -39,7 +39,7 @@ deleteTask:
 addTask:
   replicas: 2
   image:
-    name: todo-add-tasks-api
+    name: add-tasks
     tag: v1
   port: 8000
   ServicePort: 80
