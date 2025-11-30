@@ -1,5 +1,5 @@
 common:
-  containerRegistryURL: devopsinsidersacr235.azurecr.io
+  containerRegistryURL: todoappacr2ly.azurecr.io
   ingressClass: nginx
   
 ui:
@@ -10,7 +10,7 @@ ui:
   port: 80
   ServicePort: 80
   ingress:
-    host: dev-ui.jhandu.shop
+    host: dev-ui.rajnish.store
 
 getTask:
   replicas: 2
@@ -19,9 +19,9 @@ getTask:
     tag: v1
   port: 8000
   ServicePort: 80
-  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:sql-dev-todoapp-78666.database.windows.net,1433;Database=sqldb-dev-todoapp;Uid=devopsadmin;Pwd=P@ssw01rd@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:todo-sql-server-007.database.windows.net,1433;Database=todo;Uid=sqladminuser;Pwd=abcd@@@!!!1234;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
   ingress:
-    host: dev-get-tasks-api.jhandu.shop
+    host: dev-get-tasks-api.rajnish.store
     ingressClass: nginx
 
 deleteTask:
@@ -31,9 +31,9 @@ deleteTask:
     tag: v1
   port: 8000
   ServicePort: 80
-  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:sql-dev-todoapp-78666.database.windows.net,1433;Database=sqldb-dev-todoapp;Uid=devopsadmin;Pwd=P@ssw01rd@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:todo-sql-server-007.database.windows.net,1433;Database=todo;Uid=sqladminuser;Pwd=abcd@@@!!!1234;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
   ingress:
-    host: dev-delete-task-api.jhandu.shop
+    host: dev-delete-task-api.rajnish.store
     ingressClass: nginx
 
 addTask:
@@ -43,7 +43,7 @@ addTask:
     tag: v1
   port: 8000
   ServicePort: 80
-  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:sql-dev-todoapp-78666.database.windows.net,1433;Database=sqldb-dev-todoapp;Uid=devopsadmin;Pwd=P@ssw01rd@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:todo-sql-server-007.database.windows.net,1433;Database=todo;Uid=sqladminuser;Pwd=abcd@@@!!!1234;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
   ingress:
-    host: dev-add-task-api.jhandu.shop
+    host: dev-add-task-api.rajnish.store
     ingressClass: nginx
