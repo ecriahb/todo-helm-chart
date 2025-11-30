@@ -1,5 +1,5 @@
 common:
-  containerRegistryURL: devopsinsidersacr235.azurecr.io
+  containerRegistryURL: todoappacr2ly.azurecr.io
   ingressClass: azure-application-gateway
   
 ui:
@@ -19,7 +19,7 @@ getTask:
     tag: v1
   port: 8000
   ServicePort: 80
-  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:sql-dev-todoapp-786.database.windows.net,1433;Database=sqldb-dev-todoapp;Uid=devopsadmin;Pwd=P@ssw01rd@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:todo-sql-server-007.database.windows.net,1433;Database=todo;Uid=sqladminuser;Pwd=abcd@@@!!!1234;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
   ingress:
     host: get-tasks-api.jhandu.shop
     ingressClass: azure-application-gateway
@@ -31,7 +31,7 @@ deleteTask:
     tag: v1
   port: 8000
   ServicePort: 80
-  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:sql-dev-todoapp-786.database.windows.net,1433;Database=sqldb-dev-todoapp;Uid=devopsadmin;Pwd=P@ssw01rd@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:todo-sql-server-007.database.windows.net,1433;Database=todo;Uid=sqladminuser;Pwd=abcd@@@!!!1234;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
   ingress:
     host: delete-task-api.jhandu.shop
     ingressClass: azure-application-gateway
@@ -43,7 +43,7 @@ addTask:
     tag: v1
   port: 8000
   ServicePort: 80
-  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:sql-dev-todoapp-786.database.windows.net,1433;Database=sqldb-dev-todoapp;Uid=devopsadmin;Pwd=P@ssw01rd@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:todo-sql-server-007.database.windows.net,1433;Database=todo;Uid=sqladminuser;Pwd=abcd@@@!!!1234;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
   ingress:
     host: add-task-api.jhandu.shop
     ingressClass: nginx
