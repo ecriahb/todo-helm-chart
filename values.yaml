@@ -10,7 +10,7 @@ ui:
   port: 80
   ServicePort: 80
   ingress:
-    host: ui.jhandu.shop
+    host: ui.rajnish.shop
 
 getTask:
   replicas: 2
@@ -21,7 +21,7 @@ getTask:
   ServicePort: 80
   connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:todo-sql-server-007.database.windows.net,1433;Database=todo;Uid=sqladminuser;Pwd=abcd@@@!!!1234;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
   ingress:
-    host: get-tasks-api.jhandu.shop
+    host: get-tasks-api.rajnish.shop
     ingressClass: azure-application-gateway
 
 deleteTask:
@@ -33,7 +33,7 @@ deleteTask:
   ServicePort: 80
   connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:todo-sql-server-007.database.windows.net,1433;Database=todo;Uid=sqladminuser;Pwd=abcd@@@!!!1234;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
   ingress:
-    host: delete-task-api.jhandu.shop
+    host: delete-task-api.rajnish.shop
     ingressClass: azure-application-gateway
 
 addTask:
@@ -45,5 +45,5 @@ addTask:
   ServicePort: 80
   connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:todo-sql-server-007.database.windows.net,1433;Database=todo;Uid=sqladminuser;Pwd=abcd@@@!!!1234;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
   ingress:
-    host: add-task-api.jhandu.shop
+    host: add-task-api.rajnish.shop
     ingressClass: nginx
