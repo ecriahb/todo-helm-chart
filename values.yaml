@@ -3,7 +3,7 @@ common:
   ingressClass: azure-application-gateway
   
 ui:
-  replicas: 2
+  replicas: q
   image:
     name: todo-ui
     tag: v4
@@ -13,7 +13,7 @@ ui:
     host: ui.rajnish.shop
 
 getTask:
-  replicas: 2
+  replicas: 1
   image:
     name: update-tasks
     tag: v1
@@ -21,11 +21,11 @@ getTask:
   ServicePort: 80
   connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:todo-sql-server-007.database.windows.net,1433;Database=todo;Uid=sqladminuser;Pwd=abcd@@@!!!1234;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
   ingress:
-    host: get-tasks-api.rajnish.shop
+    host: get-tasks.rajnish.shop
     ingressClass: azure-application-gateway
 
 deleteTask:
-  replicas: 2
+  replicas: 1
   image:
     name: delete-tasks
     tag: v1
@@ -33,11 +33,11 @@ deleteTask:
   ServicePort: 80
   connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:todo-sql-server-007.database.windows.net,1433;Database=todo;Uid=sqladminuser;Pwd=abcd@@@!!!1234;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
   ingress:
-    host: delete-task-api.rajnish.shop
+    host: delete-tasks.rajnish.shop
     ingressClass: azure-application-gateway
 
 addTask:
-  replicas: 2
+  replicas: 1
   image:
     name: add-tasks
     tag: v1
@@ -45,5 +45,5 @@ addTask:
   ServicePort: 80
   connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:todo-sql-server-007.database.windows.net,1433;Database=todo;Uid=sqladminuser;Pwd=abcd@@@!!!1234;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
   ingress:
-    host: add-task-api.rajnish.shop
+    host: add-tasks.rajnish.shop
     ingressClass: nginx
